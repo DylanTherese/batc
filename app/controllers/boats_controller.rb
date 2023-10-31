@@ -24,13 +24,6 @@ class BoatsController < ApplicationController
     end
   end
 
-#   def edit; end
-# ​
-#   def update
-#     @boat.update(boat_params)
-#     redirect_to boat_path(@boat)
-#   end
-
   private
 
   def boat_params
