@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 Boat.destroy_all
 User.destroy_all
+
 user1 = User.create(username: "adminrico", password: "123456", email: "test@test.com")
 
 speedboat = Boat.create(
@@ -211,3 +212,4 @@ cutter.save
 file = URI.open("https://res.cloudinary.com/dtptvufa4/image/upload/v1698755730/cutter_boat2_fs8qlp_rejmfy.jpg")
 cutter.photos.attach(io: file, filename: "cutter1.jpg", content_type: "image/jpg")
 cutter.save
+
