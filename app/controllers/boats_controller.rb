@@ -1,4 +1,6 @@
 class BoatsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :home
+  before_action :set_boat, only: %i[show edit update]
 
   def index
     @boats = Boat.all
@@ -14,13 +16,20 @@ class BoatsController < ApplicationController
 
   def create
     @boat = Boat.new(boat_params)
-    @boat.save
+    @boat.user = current_user
     if @boat.save
       redirect_to boat_path(@boat)
     else
       render :new, status: :unprocessable_entity
     end
   end
+
+#   def edit; end
+# ​
+#   def update
+#     @boat.update(boat_params)
+#     redirect_to boat_path(@boat)
+#   end
 
   private
 
@@ -35,5 +44,9 @@ class BoatsController < ApplicationController
       :engine_power,
       :crew_number
     )
+  end
+
+  def set_boat
+    @boat = Boat.find(params[:id])
   end
 end
