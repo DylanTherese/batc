@@ -1,0 +1,45 @@
+.container-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .container-info{
+  margin-top: 5px;
+  background: lightgray;
+  width: 50vw;
+  padding: 10px;
+
+    h5 {
+      border-bottom: 1px solid black;
+      padding: 10px;
+    }
+
+      .container-desc {
+        border-bottom: 1px solid black;
+
+      .stats-cards {
+        margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .stats {
+          margin-top: 5px;
+          padding-left: 5px;
+          text-decoration: none;
+          list-style: none;
+          background: white;
+          padding-bottom: 5px;
+          padding-top: 5px;
+          width: 200px;
+          border-radius: 10px;
+          border: 1px solid grey;
+        }
+      }
+    }
+
+    .container-equipment {
+      margin-top: 15px;
+    }
+  }
+
+
+}

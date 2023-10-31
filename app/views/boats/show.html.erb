@@ -1,1 +1,36 @@
-<h2>Boats#show</h2>
+<div class="container">
+  <p><%= @boat.location %></p>
+  <div class="container-images">
+    <% @boat.photos.each do |photo| %>
+     <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
+  </div>
+  <div class="container-content">
+    <div class="container-info">
+      <h1><%= @boat.model %></h1>
+      <h5><%= @boat.location %></h5>
+      <div class="container-desc">
+        <h4>Description</h4>
+        <ul class="stats-cards">
+          <li class="stats">Category - <%= @boat.category %></li>
+          <li class="stats">Length - <%= @boat.length %>m</li>
+          <li class="stats">Max guests - <%= @boat.max_guests %></li>
+          <li class="stats">No. of beds - <%= @boat.beds %></li>
+          <li class="stats">Number of crew - <%= @boat.crew_number  %></li>
+          <li class="stats">Engine power - <%= @boat.engine_power %>hp</li>
+        </ul>
+      </div>
+      <div class="container-equipment">
+        <h4>Equipment on board</h4>
+      </div>
+    </div>
+    <div>
+      <div class="container-booking-form">
+        <h4>Booking form</h4>
+      </div>
+      <div class="container-renter-questions">
+        <h4>Questions to the renter</h4>
+      </div>
+    </div>
+  </div>
+</div>
