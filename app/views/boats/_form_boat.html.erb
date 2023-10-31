@@ -1,0 +1,12 @@
+<%= simple_form_for @boat, html: { class: "column-form"} do |f| %>
+  <%= f.input :model %>
+  <%= f.input :max_guests %>
+  <%= f.input :beds %>
+  <%= f.input :length %>
+  <%= f.input :engine_power %>
+  <%= f.input :crew_number %>
+  <%= f.input :location %>
+  <%= f.input :category, collection: ['Motorboat', 'Sailboat', 'RIB', 'Catamaran', 'Houseboat', 'Jet ski', 'Gulet', 'Boat without licence', 'Yacht'] %>
+  <%# <%= f.input :photo, as: :image_preview, input_html: {preview_version: :thumb} %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
