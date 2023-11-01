@@ -51,8 +51,7 @@ class BoatsController < ApplicationController
       :beds,
       :length,
       :engine_power,
-      :crew_number,
-      photos: []
+      :crew_number
     )
   end
 

@@ -55,6 +55,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_01_124854) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.integer "day_price"
+    t.string "cloudinary"
+    t.string "cloudinary2"
+    t.string "cloudinary3"
     t.index ["user_id"], name: "index_boats_on_user_id"
   end
 
