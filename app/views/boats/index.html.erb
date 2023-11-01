@@ -1,4 +1,5 @@
 
+
 <input id="searchbar" type="text"
         name="search" placeholder="Enter your location">
 
@@ -7,11 +8,11 @@
     <% @boats.each do |boat| %>
       <div class="col-lg-4">
         <div class="card" style="width: 18rem;">
-          <div id="carouselExampleIndicators" class="carousel slide">
+          <div id="carousel<%= boat.id %>" class="carousel slide">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carousel<%= boat.id %>" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousel<%= boat.id %>" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carousel<%= boat.id %>" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -24,11 +25,11 @@
                 <%= cl_image_tag("Speedboat2_ysjz1m", class: "card-img-top d-block w-100") %>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel<%= boat.id %>" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel<%= boat.id %>" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
@@ -37,11 +38,15 @@
           <div class="card-body">
             <h5 class="card-title"><%= boat.model %></h5>
             <p class="card-text"><%= boat.location %></p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <p>Price</p>
           </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-
