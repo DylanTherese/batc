@@ -1,29 +1,18 @@
 <div class="container">
   <p><%= @boat.location %></p>
 
-<% @boat.photos.each do |photo| %>
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <%= cl_image_tag photo.key[0], height: 300, width: 400, crop: :fill %>
-      </div>
-      <div class="carousel-item">
-        <%= cl_image_tag photo.key[1], height: 300, width: 400, crop: :fill %>
-      </div>
-      <div class="carousel-item">
-        <%= cl_image_tag photo.key[2], height: 300, width: 400, crop: :fill %>
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+<%#  -----------------------static images------------------------ %>
+
+  <div class="container-images">
+    <% @boat.photos.each do |photo| %>
+     <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
   </div>
-<% end %>
+
+<%#  ------------------carousel(doesn't work)-------------------- %>
+
+  <div class="carousel-show">
+  </div>
 
   <div class="container-content">
     <div class="container-info">
@@ -44,19 +33,15 @@
         <h4>Equipment on board</h4>
       </div>
     </div>
-    <div>
+    <div class="container-forms">
       <div class="container-booking-form">
-        <h4>Booking form</h4>
+        <h4>Book this craft</h4>
+        <button>Book</button>
       </div>
       <div class="container-renter-questions">
-        <h4>Questions to the renter</h4>
+        <h4>Contact the renter</h4>
+        <button>Send question</button>
       </div>
     </div>
   </div>
 </div>
-
-  <div class="container-images">
-    <% @boat.photos.each do |photo| %>
-     <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
-  </div>
