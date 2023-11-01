@@ -7,6 +7,6 @@
   <%= f.input :crew_number %>
   <%= f.input :location %>
   <%= f.input :category, collection: ['Motorboat', 'Sailboat', 'RIB', 'Catamaran', 'Houseboat', 'Jet ski', 'Gulet', 'Boat without licence', 'Yacht'] %>
-  <%# <%= f.input :photo, as: :image_preview, input_html: {preview_version: :thumb} %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>
