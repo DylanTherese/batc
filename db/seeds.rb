@@ -13,7 +13,7 @@ user1 = User.create(username: "adminrico", password: "123456", email: "test@test
 speedboat = Boat.create(
   model: "Speedy Obsession 40",
   category: "Speedboat",
-  location: "Mauritius",
+  location: "Black River",
   max_guests: 10,
   beds: 0,
   length: 2,
@@ -34,7 +34,7 @@ speedboat.save
 catamaran = Boat.create(
   model: "Divine Craft",
   category: "Catamaran",
-  location: "Mauritius",
+  location: "Tamarin",
   max_guests: 25,
   beds: 0,
   length: 5,
@@ -59,7 +59,7 @@ catamaran.save
 yacht = Boat.create(
   model: "Aqua Quell",
   category: "Yacht",
-  location: "Mauritius",
+  location: "Riviere Noire",
   max_guests: 10,
   beds: 0,
   length: 2,
@@ -78,7 +78,7 @@ yacht.save
 cabin_cruiser = Boat.create(
   model: "Cruisin' Harvest",
   category: "Cabin cruiser",
-  location: "Mauritius",
+  location: "Trou aux Biches",
   max_guests: 30,
   beds: 5,
   length: 5,
@@ -103,7 +103,7 @@ cabin_cruiser.save
 motorboat = Boat.create(
   model: "High Nook",
   category: "Motorboat",
-  location: "Mauritius",
+  location: "Flic En Flac",
   max_guests: 10,
   beds: 0,
   length: 2,
@@ -128,7 +128,7 @@ motorboat.save
 jetboat = Boat.create(
   model: "Tender Crest",
   category: "Jetboat",
-  location: "Mauritius",
+  location: "Blue Bay",
   max_guests: 10,
   beds: 0,
   length: 2,
@@ -153,7 +153,7 @@ jetboat.save
 sloop = Boat.create(
   model: "Stout Master",
   category: "Sloop",
-  location: "Mauritius",
+  location: "Albion",
   max_guests: 15,
   beds: 0,
   length: 4,
@@ -172,7 +172,7 @@ sloop.save
 yawl = Boat.create(
   model: "Salty Admiral",
   category: "Yawl",
-  location: "Mauritius",
+  location: "Le Morne",
   max_guests: 8,
   beds: 0,
   length: 3,
@@ -194,7 +194,7 @@ yawl.save
 cutter = Boat.create(
   model: "Lil' Victory",
   category: "Cutter",
-  location: "Mauritius",
+  location: "Belle Mare",
   max_guests: 5,
   beds: 0,
   length: 1.5,
@@ -212,4 +212,3 @@ cutter.save
 file = URI.open("https://res.cloudinary.com/dtptvufa4/image/upload/v1698755730/cutter_boat2_fs8qlp_rejmfy.jpg")
 cutter.photos.attach(io: file, filename: "cutter1.jpg", content_type: "image/jpg")
 cutter.save
-
