@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_31_132443) do
+
+
+ActiveRecord::Schema[7.0].define(version: 2023_11_01_113205) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,7 +57,22 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_31_132443) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.string "cloudinary"
+    t.string "cloudinary2"
+    t.string "cloudinary3"
     t.index ["user_id"], name: "index_boats_on_user_id"
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.bigint "boat_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "price"
+    t.bigint "users_id", null: false
+    t.index ["boat_id"], name: "index_bookings_on_boat_id"
+    t.index ["users_id"], name: "index_bookings_on_users_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -76,4 +94,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_31_132443) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "boats", "users"
+  add_foreign_key "bookings", "boats"
+  add_foreign_key "bookings", "users", column: "users_id"
 end

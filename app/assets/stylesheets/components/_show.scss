@@ -40,6 +40,25 @@
       margin-top: 15px;
     }
   }
+}
 
+.container-forms {
+  width: 58vh;
+  margin-top: 5px;
+  margin-left: 10px;
 
+  .container-booking-form {
+    background: lightgray;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .container-renter-questions {
+    background: lightgray;
+    padding: 10px;
+  }
+}
+
+.carousel-inner {
+  max-height: 500px;
 }
