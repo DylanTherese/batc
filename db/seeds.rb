@@ -26,7 +26,6 @@ Boat.create(
   user: user1
 )
 
-
 Boat.create(
   model: "Divine Craft",
   category: "Catamaran",
@@ -36,7 +35,7 @@ Boat.create(
   length: 5,
   engine_power: 200,
   crew_number: 2,
-  day_price: 22500
+  day_price: 22500,
   cloudinary: "https://static1.clickandboat.com/v1/p/3uAuCodQ5TmaiuFsRkhDLafSvDli3gc2.big.jpg",
   cloudinary2: "https://static1.clickandboat.com/v1/p/AtEltf1KOgRHD59RJW9dgGSQaTMfrNkM.big.jpg",
   cloudinary3: "https://static1.clickandboat.com/v1/p/FfVvNW0PWwiJK9ohgQgt1qDXy7mshIdk.big.jpg",
@@ -44,7 +43,7 @@ Boat.create(
 )
 
 
-yacht = Boat.create(
+Boat.create(
   model: "Aqua Quell",
   category: "Yacht",
   location: "Riviere Noire",
@@ -62,7 +61,7 @@ yacht = Boat.create(
 
 
 
-cabin_cruiser = Boat.create(
+Boat.create(
   model: "Cruisin' Harvest",
   category: "Cabin cruiser",
   location: "Trou aux Biches",
@@ -80,7 +79,7 @@ cabin_cruiser = Boat.create(
 
 
 
-motorboat = Boat.create(
+Boat.create(
   model: "High Nook",
   category: "Motorboat",
   location: "Flic En Flac",
@@ -98,7 +97,7 @@ motorboat = Boat.create(
 
 
 
-jetboat = Boat.create(
+Boat.create(
   model: "Tender Crest",
   category: "Jetboat",
   location: "Blue Bay",
@@ -116,7 +115,7 @@ jetboat = Boat.create(
 
 
 
-sloop = Boat.create(
+Boat.create(
   model: "Stout Master",
   category: "Sloop",
   location: "Albion",
@@ -134,7 +133,7 @@ sloop = Boat.create(
 
 
 
-yawl = Boat.create(
+Boat.create(
   model: "Salty Admiral",
   category: "Yawl",
   location: "Le Morne",
@@ -152,7 +151,7 @@ yawl = Boat.create(
 
 
 
-cutter = Boat.create(
+Boat.create(
   model: "Lil' Victory",
   category: "Cutter",
   location: "Belle Mare",
