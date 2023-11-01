@@ -10,13 +10,15 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    set_boat
   end
 
   def create
     @booking = Booking.new(@booking_params)
+    @booking.boat = @boat
     @booking.user = current_user
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to bookings_path(@booking)
     else
       render :new, status: :unprocessable_entity
     end
@@ -46,5 +48,13 @@ class BookingsController < ApplicationController
       :end_date,
       :price
     )
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
+
+  def set_boat
+    @boat = Boat.find(params[:boat_id])
   end
 end

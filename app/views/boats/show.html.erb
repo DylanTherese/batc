@@ -20,6 +20,7 @@
       <h5><%= @boat.location %></h5>
       <div class="container-desc">
         <h4>Description</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis maxime placeat, hic laborum dicta, cupiditate magni, dignissimos possimus laudantium perferendis eaque. Perferendis corrupti laudantium rerum quos debitis sapiente recusandae neque? Assumenda repellendus architecto iure libero minus facilis, incidunt quisquam inventore nulla commodi voluptate sit nisi veniam repellat dolorem quaerat quo, voluptatibus, eius voluptatum voluptates doloremque laboriosam. Obcaecati, debitis tempore!</p>
         <ul class="stats-cards">
           <li class="stats">Category - <%= @boat.category %></li>
           <li class="stats">Length - <%= @boat.length %>m</li>
@@ -36,7 +37,9 @@
     <div class="container-forms">
       <div class="container-booking-form">
         <h4>Book this craft</h4>
-        <button>Book</button>
+        <h6>Conditions of booking</h6>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quibusdam aspernatur itaque neque illum architecto quaerat doloribus molestiae obcaecati iusto.</p>
+        <%= link_to "Booking form", new_boat_booking_path(@boat[:id]), class: "btn btn-outline-primary" %>
       </div>
       <div class="container-renter-questions">
         <h4>Contact the renter</h4>
