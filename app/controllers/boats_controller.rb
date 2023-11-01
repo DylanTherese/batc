@@ -35,7 +35,8 @@ class BoatsController < ApplicationController
       :beds,
       :length,
       :engine_power,
-      :crew_number
+      :crew_number,
+      
     )
   end
 
