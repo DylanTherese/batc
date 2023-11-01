@@ -1,10 +1,19 @@
 <div class="container">
   <p><%= @boat.location %></p>
+
+<%#  -----------------------static images------------------------ %>
+
   <div class="container-images">
     <% @boat.photos.each do |photo| %>
      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
     <% end %>
   </div>
+
+<%#  ------------------carousel(doesn't work)-------------------- %>
+
+  <div class="carousel-show">
+  </div>
+
   <div class="container-content">
     <div class="container-info">
       <h1><%= @boat.model %></h1>
@@ -24,12 +33,14 @@
         <h4>Equipment on board</h4>
       </div>
     </div>
-    <div>
+    <div class="container-forms">
       <div class="container-booking-form">
-        <h4>Booking form</h4>
+        <h4>Book this craft</h4>
+        <button>Book</button>
       </div>
       <div class="container-renter-questions">
-        <h4>Questions to the renter</h4>
+        <h4>Contact the renter</h4>
+        <button>Send question</button>
       </div>
     </div>
   </div>
