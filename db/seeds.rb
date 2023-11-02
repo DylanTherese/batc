@@ -42,7 +42,6 @@ Boat.create(
   user: user1
 )
 
-
 Boat.create(
   model: "Aqua Quell",
   category: "Yacht",
@@ -58,8 +57,6 @@ Boat.create(
   cloudinary3: "https://yachtmauritius.com/wp-content/uploads/2022/09/princess-50-flyboard-mauritius-6-scaled-e1664195859324.jpg",
   user: user1
 )
-
-
 
 Boat.create(
   model: "Cruisin' Harvest",
@@ -77,8 +74,6 @@ Boat.create(
   user: user1
 )
 
-
-
 Boat.create(
   model: "High Nook",
   category: "Motorboat",
@@ -94,8 +89,6 @@ Boat.create(
   cloudinary3: "https://ik.imagekit.io/zizooboats/boat/0004/73/ce97e77f947bd693ba7c8dd96312ac75f27576b0.jpeg?tr=w-1280,h-960,t-true",
   user: user1
 )
-
-
 
 Boat.create(
   model: "Tender Crest",
@@ -113,8 +106,6 @@ Boat.create(
   user: user1
 )
 
-
-
 Boat.create(
   model: "Stout Master",
   category: "Sloop",
@@ -131,8 +122,6 @@ Boat.create(
   user: user1
 )
 
-
-
 Boat.create(
   model: "Salty Admiral",
   category: "Yawl",
@@ -148,8 +137,6 @@ Boat.create(
   cloudinary3: "https://images.squarespace-cdn.com/content/v1/55525378e4b06e6e38253f16/1558551730365-YLUZDSKB09ST59TNJCMI/IMG_5754.PNG?format=1500w",
   user: user1
 )
-
-
 
 Boat.create(
   model: "Lil' Victory",
