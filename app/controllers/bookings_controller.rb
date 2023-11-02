@@ -1,7 +1,8 @@
 class BookingsController < ApplicationController
+  before_action :set_boat, only: [:create, :new, :show, :index]
 
-  def index
-    @bookings = Booking.all
+  def my_booking
+    @bookings = current_user.bookings
   end
 
   def show
@@ -10,16 +11,16 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    set_boat
   end
 
   def create
-    @booking = Booking.new(@booking_params)
-    @booking.boat_id = set_boat.id
-    @booking.users_id = current_user.id
-    set_boat
+    @booking = Booking.new(booking_params)
+    @booking.boat = @boat
+    @booking.user = current_user
+    @booking_days = (@booking.end_date - @booking.start_date).to_i
+    @booking.price = (@booking_days * @booking.boat.day_price)
     if @booking.save
-      redirect_to boat_booking_path(set_boat, @booking[:id])
+      redirect_to boat_booking_path(@boat, @booking[:id])
     else
       render :new, status: :unprocessable_entity
     end
@@ -46,9 +47,7 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(
       :start_date,
-      :end_date,
-      :price,
-      :boat_id
+      :end_date
     )
   end
 

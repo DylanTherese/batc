@@ -1,1 +1,12 @@
-<h1>My booking</h1>
+<div class="container-bg" style="background-image: url('<%= @boat.cloudinary %>');height: 95vh; background-size: cover;">
+  <div class="container-booking">
+    <h1>My booking</h1>
+    <%= @boat.model %>
+    <%= @boat.category %>
+    <%= @booking.start_date %>
+    <%= @booking.end_date %>
+    <%= @booking.price %>
+
+    <%= link_to "Back to bookings list", boat_bookings_path()%>
+  </div>
+</div>
