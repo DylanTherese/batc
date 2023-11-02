@@ -4,6 +4,10 @@ class BoatsController < ApplicationController
 
   def index
     @boats = Boat.all
+    if params[:query].present?
+      sql_subquery = "category ILIKE :query OR location ILIKE :query"
+      @boats = @boats.where(sql_subquery, query: "%#{params[:query]}%")
+    end
   end
 
   def show
