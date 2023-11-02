@@ -1,10 +1,102 @@
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static1.clickandboat.com/v1/o/img/homeHeroDesktopBig-CAB~254623afff.jpg);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.licdn.com/dms/image/D4E12AQEr5gy-8GzdRw/article-inline_image-shrink_1500_2232/0/1668009142221?e=1703116800&v=beta&t=v4gUk5iw8hEeotQYwms7w1HgnwAcH2nhGMnFJm2SdSA);">
   <div class="container">
     <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
     <p>Change your life and learn to code at one of our campuses around the world.</p>
     <a class="btn btn-flat" href="#">Apply now</a>
-    
+    <br>
+    <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <div class="search-form-control form-group">
+    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+    <button name="button" type="submit" class="btn btn-flat">
+      <i class="fas fa-search"></i> Search
+    </button>
+  </div>
+<% end %>
     <%= render 'form_search_home', boat: @boat %>
   </div>
 </div>
+
+<br>
+<div class="container">
+  <h2>Our favourite destinations</h2>
+  <div class="cards">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://mauritiusexplored.com/wp-content/uploads/2020/11/Ile-Plate-boat-tour-min.jpg)">
+      Ilot Gabriel
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://i.vimeocdn.com/video/538208995-628b5265cd6ed1a8a9f05de434a5ad465c3a3f843631ae0893a8ceb10b0b64e9-d?f=webp)">
+      Coin de Mire
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://www.johandroneadventures.com/wp-content/gallery/mauritius/Ile-aux-Benitiers-IG01.jpg)">
+      Ile aux Bénitiers
+    </div>
+  </div>
+
+  
+  <div class="container px-4 py-5" id="icon-grid">
+    <h2>Icon grid</h2>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"/></svg>
+        <div>
+          <h4 class="fw-bold mb-0">Featured title</h4>
+          <p>Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"/></svg>
+        <div>
+          <h4 class="fw-bold mb-0">Featured title</h4>
+          <p>Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"/></svg>
+        <div>
+          <h4 class="fw-bold mb-0">Featured title</h4>
+          <p>Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"/></svg>
+        <div>
+          <h4 class="fw-bold mb-0">Featured title</h4>
+          <p>Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"/></svg>
+        <div>
+          <h4 class="fw-bold mb-0">Featured title</h4>
+          <p>Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"/></svg>
+        <div>
+          <h4 class="fw-bold mb-0">Featured title</h4>
+          <p>Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"/></svg>
+        <div>
+          <h4 class="fw-bold mb-0">Featured title</h4>
+          <p>Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"/></svg>
+        <div>
+          <h4 class="fw-bold mb-0">Featured title</h4>
+          <p>Paragraph of text beneath the heading to explain the heading.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
