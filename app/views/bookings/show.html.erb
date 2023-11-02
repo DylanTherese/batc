@@ -1,12 +1,15 @@
 <div class="container-bg" style="background-image: url('<%= @boat.cloudinary %>');height: 95vh; background-size: cover;">
   <div class="container-booking">
-    <h1>My booking</h1>
-    <%= @boat.model %>
-    <%= @boat.category %>
-    <%= @booking.start_date %>
-    <%= @booking.end_date %>
-    <%= @booking.price %>
-
-    <%= link_to "Back to bookings list", boat_bookings_path()%>
+    <h2>My <%= @boat.model %> booking</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Category - <%= @boat.category %></li>
+      <li class="list-group-item">Start Date - <%= @booking.start_date %></li>
+      <li class="list-group-item">End Date - <%= @booking.end_date %></li>
+      <li class="list-group-item">Total Price - Rs.<%= @booking.price %></li>
+    </ul>
+    <div id="btn-box">
+      <%= link_to "Back to bookings list", my_booking_path, class: "btn btn-outline-secondary"%>
+      <%= link_to "Delete booking", my_booking_path, data: {turbo_method: :delete}, class: "btn btn-outline-danger"%>
+    </div>
   </div>
 </div>
