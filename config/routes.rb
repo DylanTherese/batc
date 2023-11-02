@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :boats do
-    resources :bookings
+    resources :bookings, except: :index
   end
+
+  get "my_booking", to: "bookings#my_booking", as: :my_booking
 end
