@@ -1,0 +1,6 @@
+<h1>List of bookings</h1>
+<% @bookings.each do |booking| %>
+  <h4><%= booking.boat.model %></h4>
+  <p><%= booking.start_date %></p>
+  <p><%= booking.end_date %></p>
+<% end %>
