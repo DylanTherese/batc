@@ -7,6 +7,7 @@
   <%= f.input :crew_number %>
   <%= f.input :location %>
   <%= f.input :category, collection: ['Motorboat', 'Sailboat', 'RIB', 'Catamaran', 'Houseboat', 'Jet ski', 'Gulet', 'Boat without licence', 'Yacht'] %>
+  <%= f.input :day_price %>
   <%= f.input :photo, as: :file, input_html: { multiple: true } %>
   <%= f.submit class: "btn btn-primary" %>
 <% end %>
