@@ -4,9 +4,12 @@
     <ul class="list-group" id="li-gr">
       <% @bookings.each do |booking| %>
         <li class="list-group-item" id="li-it"><h4><%= booking.boat.model %></h4>
-        <p>From: <%= booking.start_date %></p>
-        <p>Until: <%= booking.end_date %></p>
-        <%# <%= link_to "See details", boat_booking_path(@boat, booking[:id]) %></li>
+            <p>From: <%= booking.start_date %></p>
+            <p>Until: <%= booking.end_date %></p>
+        <div id="card-buttons">
+          <%= link_to "See details", boat_booking_path(booking.boat, booking), class: "btn btn-outline-dark" %>
+        </div>
+        </li>
       <% end %>
     </ul>
   </div>

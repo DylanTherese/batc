@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_boat, only: [:create, :new, :show, :index]
+  before_action :set_booking, only: [:show, :edit, :update, :delete]
 
   def my_booking
     @bookings = current_user.bookings
@@ -39,7 +40,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to bookings_path, status: :see_other
+    redirect_to my_booking_path, status: :see_other
   end
 
   private
@@ -53,5 +54,9 @@ class BookingsController < ApplicationController
 
   def set_boat
     @boat = Boat.find(params[:boat_id])
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:id])
   end
 end
