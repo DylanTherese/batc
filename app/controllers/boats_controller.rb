@@ -4,13 +4,8 @@ class BoatsController < ApplicationController
 
   def index
     @boats = Boat.all
-    
-    @markers = @boats.geocoded.map do |boat|
-      {
-        lat: boat.latitude,
-        lng: boat.longitude
-      }
-    end
+
+
 
     if params[:query].present?
       sql_subquery = "category ILIKE :query OR location ILIKE :query"
@@ -20,6 +15,10 @@ class BoatsController < ApplicationController
 
   def show
     @boat = Boat.find(params[:id])
+    @marker = [{
+      lat: @boat.latitude,
+      lng: @boat.longitude
+    }]
 
   end
 
