@@ -1,14 +1,13 @@
 
 
-<input id="searchbar" type="text"
-        name="search" placeholder="Enter your location">
+
 
 <div class="container">
   <div class="row">
     <% @boats.each do |boat| %>
 
       <div class="col-lg-4">
-        <div class="card" style="width: 18rem;">
+        <div class="card bg-light mb-3" style="width: 18rem;">
 
           <div id="carousel<%= boat.id %>" class="carousel slide">
             <div class="carousel-indicators">

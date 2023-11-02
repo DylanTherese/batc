@@ -10,13 +10,13 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class= "big-image w-100 height" src= <%= @boat.cloudinary %>  alt="">
+                <img class= "d-block" src= <%= @boat.cloudinary %>  alt="">
               </div>
               <div class="carousel-item">
-                <img class= "big-image w-100" src= <%= @boat.cloudinary2 %>  alt="">
+                <img class= "d-block" src= <%= @boat.cloudinary2 %>  alt="">
               </div>
               <div class="carousel-item">
-                <img class= "big-image w-100 h-10" src= <%= @boat.cloudinary3 %>  alt="">
+                <img class= "d-block" src= <%= @boat.cloudinary3 %>  alt="">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel<%= @boat.id %>" data-bs-slide="prev">
@@ -71,3 +71,7 @@
     </div>
   </div>
 </div>
+
+
+
+<%# ----------------------------------------------------- %>
