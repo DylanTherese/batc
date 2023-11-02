@@ -34,8 +34,8 @@ class BoatsController < ApplicationController
 
   def update
     @boat = Boat.find(params[:id])
-    @boat.update(task_params)
-    redirect_to boat_path(@boat)
+    @boat.update(boat_params)
+    redirect_to boats_path(@boat)
   end
 
   def destroy
@@ -55,7 +55,8 @@ class BoatsController < ApplicationController
       :beds,
       :length,
       :engine_power,
-      :crew_number
+      :crew_number,
+      :day_price
     )
   end
 
