@@ -117,7 +117,7 @@ Boat.create(
   engine_power: 250,
   crew_number: 7,
   day_price: 14550,
-  cloudinary: "https://www.collinsdictionary.com/images/thumb/sloop_83140120_250.jpg?version=5.0.20",
+  cloudinary: "https://asa.com/wordpress/wp-content/uploads/2015/05/sloop-rig2.jpg",
   cloudinary2: "https://static.dezeen.com/uploads/2008/07/b60-sloop-by-john-pawson-and-luca-brenta-squ0745-1173.jpg",
   cloudinary3: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD_yztvImx6-MJmc7ce2B7XZ9dRvy5e8-cjAlpRhBfjitFHMEWVaRRJWvfMR13qK6B_G0&usqp=CAU",
   user: user1
