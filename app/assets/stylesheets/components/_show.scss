@@ -3,8 +3,8 @@
   grid-template-columns: 1fr 1fr;
 
   .container-info{
-  margin-top: 5px;
-  background: lightgray;
+  margin-top: 15px;
+  background: #F4F4F4;
   width: 50vw;
   padding: 10px;
 
@@ -15,6 +15,7 @@
 
       .container-desc {
         border-bottom: 1px solid black;
+      }
 
       .stats-cards {
         margin-bottom: 15px;
@@ -23,7 +24,6 @@
 
         .stats {
           margin-top: 5px;
-          padding-left: 5px;
           text-decoration: none;
           list-style: none;
           background: white;
@@ -34,7 +34,6 @@
           border: 1px solid grey;
         }
       }
-    }
 
     .container-equipment {
       margin-top: 15px;
@@ -43,27 +42,32 @@
 }
 
 .container-forms {
-  width: 58vh;
-  margin-top: 5px;
+  width: 60vh;
+  margin-top: 15px;
   margin-left: 10px;
 
   .container-booking-form {
-    background: lightgray;
+    background: #F4F4F4;
     padding: 10px;
     margin-bottom: 10px;
-  }
-
-  .container-renter-questions {
-    background: lightgray;
-    padding: 10px;
   }
 }
 
 .carousel-img {
   width: 100%;
   height: 600px;
+  border-radius: 15px;
 }
 
 .container-content {
   width: 100%;
+}
+
+#mapbox {
+  width: 100%;
+  height: 600px;
+  margin-top: 15px;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  box-shadow: 2px 3px 5px lightgray;
 }

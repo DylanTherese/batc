@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="d-flex bd-highlight mb-3">
+  <div class="d-flex bd-highlight my-3 align-items-center">
     <div class="me-auto p-2 bd-highlight">
-      <p class="border border-primary p-2"><%= @boat.location %></p>
+      <p>Mauritius / <%= @boat.location %> / <strong><%= @boat.model %></strong></p>
     </div>
 
 
@@ -98,7 +98,7 @@
   <div class="container-content">
     <div class="container-info">
       <h1><%= @boat.model %></h1>
-      <h5><%= @boat.location %> - <%= @boat.day_price %>Rs/per day</h5>
+      <h5><%= @boat.location %> - Rs.<%= @boat.day_price %>/per day</h5>
       <div class="container-desc">
         <h4>Description</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis maxime placeat, hic laborum dicta, cupiditate magni, dignissimos possimus laudantium perferendis eaque. Perferendis corrupti laudantium rerum quos debitis sapiente recusandae neque? Assumenda repellendus architecto iure libero minus facilis, incidunt quisquam inventore nulla commodi voluptate sit nisi veniam repellat dolorem quaerat quo, voluptatibus, eius voluptatum voluptates doloremque laboriosam. Obcaecati, debitis tempore!</p>
@@ -122,17 +122,13 @@
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum quibusdam aspernatur itaque neque illum architecto quaerat doloribus molestiae obcaecati iusto.</p>
         <%= link_to "Booking form", new_boat_booking_path(@boat[:id]), class: "btn btn-outline-primary" %>
       </div>
-      <div class="container-renter-questions">
-        <h4>Contact the renter</h4>
-        <button>Send question</button>
-      </div>
     </div>
   </div>
 
 
-  <div style="width: 100%; height: 600px; margin-top: 15px;"
+  <div
+    id="mapbox"
     data-controller="map"
     data-map-markers-value="<%= @marker.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
 </div>
