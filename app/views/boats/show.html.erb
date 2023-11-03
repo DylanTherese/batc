@@ -47,8 +47,8 @@
                <p>Are you sure you want to delete this boat?</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <%= link_to "Delete", boat_path(@boat), data: {turbo_method: :delete}, class:"btn btn-danger" %>
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+              <%= link_to "Delete", boat_path(@boat), data: {turbo_method: :delete}, class:"btn btn-outline-danger" %>
             </div>
           </div>
         </div>
@@ -69,15 +69,7 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-
                 <img class= "d-block carousel-img" src= <%= @boat.cloudinary %> alt="">
-
-
-                <img class= "d-block carousel-img" src= <%= @boat.cloudinary %>  alt="">
-
-
-
-
               </div>
               <div class="carousel-item">
                 <img class= "d-block carousel-img" src= <%= @boat.cloudinary2 %>  alt="">
@@ -108,17 +100,23 @@
       <div class="container-desc">
         <h4>Description</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit corporis maxime placeat, hic laborum dicta, cupiditate magni, dignissimos possimus laudantium perferendis eaque. Perferendis corrupti laudantium rerum quos debitis sapiente recusandae neque? Assumenda repellendus architecto iure libero minus facilis, incidunt quisquam inventore nulla commodi voluptate sit nisi veniam repellat dolorem quaerat quo, voluptatibus, eius voluptatum voluptates doloremque laboriosam. Obcaecati, debitis tempore!</p>
-        <ul class="stats-cards">
-          <li class="stats">Category - <%= @boat.category %></li>
-          <li class="stats">Length - <%= @boat.length %>m</li>
-          <li class="stats">Max guests - <%= @boat.max_guests %></li>
-          <li class="stats">No. of beds - <%= @boat.beds %></li>
-          <li class="stats">Number of crew - <%= @boat.crew_number  %></li>
-          <li class="stats">Engine power - <%= @boat.engine_power %>hp</li>
-        </ul>
+        <div class="stats-cards">
+          <p class="stats">Category - <%= @boat.category %></p>
+          <p class="stats">Length - <%= @boat.length %>m</p>
+          <p class="stats">Max guests - <%= @boat.max_guests %></p>
+          <p class="stats">No. of beds - <%= @boat.beds %></p>
+          <p class="stats">Number of crew - <%= @boat.crew_number  %></p>
+          <p class="stats">Engine power - <%= @boat.engine_power %>hp</p>
+        </div>
       </div>
       <div class="container-equipment">
         <h4>Equipment on board</h4>
+        <ul>
+          <li>Snorkelling gear</li>
+          <li>Safety jackets</li>
+          <li>Wetsuits</li>
+          <li>Fishing gear</li>
+        </ul>
       </div>
     </div>
     <div class="container-forms">
