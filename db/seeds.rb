@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 Boat.destroy_all
+Booking.destroy_all
 User.destroy_all
 
 user1 = User.create(username: "adminrico", password: "123456", email: "test@test.com")
@@ -13,7 +14,7 @@ user1 = User.create(username: "adminrico", password: "123456", email: "test@test
 Boat.create(
   model: "Speedy Obsession 40",
   category: "Speedboat",
-  location: "Black River",
+  location: "Black River, Mauritius",
   max_guests: 10,
   beds: 0,
   length: 2,
@@ -29,7 +30,7 @@ Boat.create(
 Boat.create(
   model: "Divine Craft",
   category: "Catamaran",
-  location: "Tamarin",
+  location: "Tamarin, Mauritius",
   max_guests: 25,
   beds: 0,
   length: 5,
@@ -45,7 +46,7 @@ Boat.create(
 Boat.create(
   model: "Aqua Quell",
   category: "Yacht",
-  location: "Riviere Noire",
+  location: "Riviere Noire, Mauritius",
   max_guests: 10,
   beds: 0,
   length: 2,
@@ -61,7 +62,7 @@ Boat.create(
 Boat.create(
   model: "Cruisin' Harvest",
   category: "Cabin cruiser",
-  location: "Trou aux Biches",
+  location: "Trou aux Biches, Mauritius",
   max_guests: 30,
   beds: 5,
   length: 5,
@@ -77,7 +78,7 @@ Boat.create(
 Boat.create(
   model: "High Nook",
   category: "Motorboat",
-  location: "Flic En Flac",
+  location: "Flic En Flac, Mauritius",
   max_guests: 10,
   beds: 0,
   length: 2,
@@ -93,7 +94,7 @@ Boat.create(
 Boat.create(
   model: "Tender Crest",
   category: "Jetboat",
-  location: "Blue Bay",
+  location: "Blue Bay, Mauritius",
   max_guests: 10,
   beds: 0,
   length: 2,
@@ -109,7 +110,7 @@ Boat.create(
 Boat.create(
   model: "Stout Master",
   category: "Sloop",
-  location: "Albion",
+  location: "Albion, Mauritius",
   max_guests: 15,
   beds: 0,
   length: 4,
@@ -125,7 +126,7 @@ Boat.create(
 Boat.create(
   model: "Salty Admiral",
   category: "Yawl",
-  location: "Le Morne",
+  location: "Le Morne, Mauritius",
   max_guests: 8,
   beds: 0,
   length: 3,
@@ -141,7 +142,7 @@ Boat.create(
 Boat.create(
   model: "Lil' Victory",
   category: "Cutter",
-  location: "Belle Mare",
+  location: "Belle Mare, Mauritius",
   max_guests: 5,
   beds: 0,
   length: 1.5,

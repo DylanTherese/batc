@@ -11,8 +11,11 @@ export default class extends Controller {
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
+      countries: "mu",
       container: this.element,
-      style: "mapbox://styles/mapbox/streets-v10"
+      style: "mapbox://styles/mapbox/streets-v10",
+      center: [57.5522, -20.2370],
+      zoom: 9.2
     })
     this.addMarkersToMap()
     this.fitMapToMarkers()
@@ -26,9 +29,9 @@ export default class extends Controller {
     })
   }
 
-  fitMapToMarkers() {
-    const bounds = new mapboxgl.LngLatBounds()
-    this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
-    this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
-  }
+  // fitMapToMarkers() {
+  //   const bounds = new mapboxgl.LngLatBounds()
+  //   this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
+  //   this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
+  // }
 }
