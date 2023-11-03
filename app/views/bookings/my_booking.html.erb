@@ -1,6 +1,16 @@
-<h1>List of bookings</h1>
-<% @bookings.each do |booking| %>
-  <h4><%= booking.boat.model %></h4>
-  <p><%= booking.start_date %></p>
-  <p><%= booking.end_date %></p>
-<% end %>
+<div class="container mt-3 pb-3">
+  <h2>List of bookings</h2>
+  <div class="container-list">
+    <ul class="list-group" id="li-gr">
+      <% @bookings.each do |booking| %>
+        <li class="list-group-item" id="li-it"><h4><%= booking.boat.model %></h4>
+            <p>From: <%= booking.start_date %></p>
+            <p>Until: <%= booking.end_date %></p>
+        <div id="card-buttons">
+          <%= link_to "See details", boat_booking_path(booking.boat, booking), class: "btn btn-outline-dark" %>
+        </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
