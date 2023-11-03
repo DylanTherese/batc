@@ -7,7 +7,7 @@
             <p>From: <%= booking.start_date %></p>
             <p>Until: <%= booking.end_date %></p>
         <div id="card-buttons">
-          <%= link_to "See details", boat_booking_path(booking.boat, booking), class: "btn btn-outline-dark" %>
+          <%= link_to "See details", boat_booking_path(booking.boat, booking), class: "btn btn-outline-secondary" %>
         </div>
         </li>
       <% end %>
