@@ -1,26 +1,15 @@
-.btn-flat {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: #1020ff;
-  transition: background 0.3s ease;
+.btn-outline-primary {
+  border-radius: 5px;;
 }
 
-.btn-flat:hover {
-  background: #071197;
+.btn-outline-danger {
+  border-radius: 5px;
+}
+
+.btn-outline-danger:hover {
   color: white;
 }
 
-
-.btn-flat-red {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  background: #ff1010;
-  transition: background 0.3s ease;
-}
-
-.btn-flat-red:hover {
-  background: #8f0808;
-  color: white;
+.btn-outline-secondary {
+  border-radius: 5px;
 }

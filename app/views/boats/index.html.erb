@@ -2,11 +2,11 @@
 
 
 
-<div class="container">
+<div class="container mt-3">
   <div class="row">
     <% @boats.each do |boat| %>
 
-      <div class="col-lg-4">
+      <div class="col-lg-4 rounded">
         <div class="card bg-light mb-3" style="width: 18rem;">
 
           <div id="carousel<%= boat.id %>" class="carousel slide">
@@ -45,12 +45,10 @@
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
             <p><%= boat.day_price %>Rs/per day</p>
-            <%= link_to "Show more details", boat_path(boat), class: "btn btn-outline-primary w-100" %>
+            <%= link_to "Show more details", boat_path(boat), class:"btn btn-outline-primary w-100" %>
           </div>
         </div>
       </div>
       <% end %>
   </div>
 </div>
-
-
