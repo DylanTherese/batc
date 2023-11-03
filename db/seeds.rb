@@ -101,9 +101,9 @@ Boat.create(
   engine_power: 175,
   crew_number: 6,
   day_price: 9000,
-  cloudinary: "https://www.taxi-inmauritius.com/wp-content/uploads/2016/02/seakart-1.jpg",
+  cloudinary: "https://www.jetboatextreme.com.au/assets/images/England_Rugby_League.jpg",
   cloudinary2: "https://www.discovergermany.com/wp-content/uploads/2017/01/jetboat.jpg",
-  cloudinary3: "https://www.jetboatextreme.com.au/assets/images/England_Rugby_League.jpg",
+  cloudinary3: "https://www.taxi-inmauritius.com/wp-content/uploads/2016/02/seakart-1.jpg",
   user: user1
 )
 
@@ -133,9 +133,9 @@ Boat.create(
   engine_power: 100,
   crew_number: 8,
   day_price: 17800,
-  cloudinary: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Chubasco_photo_D_Ramey_Logan.jpg/220px-Chubasco_photo_D_Ramey_Logan.jpg",
-  cloudinary2: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Drascombe_Lugger_sailboat_3912.jpg/220px-Drascombe_Lugger_sailboat_3912.jpg",
-  cloudinary3: "https://images.squarespace-cdn.com/content/v1/55525378e4b06e6e38253f16/1558551730365-YLUZDSKB09ST59TNJCMI/IMG_5754.PNG?format=1500w",
+  cloudinary: "https://images.squarespace-cdn.com/content/v1/55525378e4b06e6e38253f16/1558551730365-YLUZDSKB09ST59TNJCMI/IMG_5754.PNG?format=1500w",
+  cloudinary2: "https://cdn.pixabay.com/photo/2017/09/17/16/35/boats-2758962_1280.jpg",
+  cloudinary3: "https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   user: user1
 )
 
